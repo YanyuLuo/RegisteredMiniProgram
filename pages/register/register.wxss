@@ -1,0 +1,6 @@
+/* pages/register/register.wxss */
+.container-hang {  
+    display: flex;  
+    flex-direction: row;  
+    background-color: #fff;   
+}  

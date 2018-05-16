@@ -1,0 +1,58 @@
+<!--pages/actdetinfo/actdetinfo.wxml-->
+
+<view class='item'  wx:for="{{plist}}" wx:key="" data-index='{{index}}'>
+  <view class='part1'>
+    <view class='actimg'><image class='img' src='{{actimg}}'></image></view>
+    <view class='actsiminfo'>
+      <view class='pub'>发布者：{{plist[index].userName}}</view>
+      <view class='pub'>发布单位：{{plist[index].userUnit}}</view>
+      <view class='pub'>发布时间：</view>
+      <view class='pub'>{{plist[index].actOkTime}}</view>
+      <view class='pub'>活动状态：{{plist[index].actFlag}}</view>
+    </view>
+  </view>
+  <view class='ahr'></view>
+  <view class='part2'>
+    <view class='cell'>
+      <view class='cellhead'><image class='imgicon' src='{{icon.dname}}'></image>活动名称:</view>
+      <view class='cellcontent'>{{plist[index].actName}}</view>
+    </view>
+    <view class='dot'></view>
+    <view class='cell'>
+      <view class='cellhead'><image class='imgicon' src='{{icon.dtheme}}'></image>活动主题:</view>
+      <view class='cellcontent'>{{plist[index].actTheme}}</view>
+    </view>
+    <view class='dot'></view>
+    <view class='cell'>
+      <view class='cellhead'><image class='imgicon' src='{{icon.dloc}}'></image>活动地点:<view class='kantu' bindtap='kantu'>点我看图</view></view>
+      <view class='cellcontent'>{{plist[index].actLocation}}</view>
+    </view>
+    <view class='dot'></view>
+    <view class='cell'>
+      <view class='cellhead'><image class='imgicon' src='{{icon.dcont}}'></image>活动内容:</view>
+      <view class='cellcontent'>{{plist[index].actContent}}</view>
+    </view>
+    <view class='dot'></view>
+    <view class='cell'>
+      <view class='cellhead'><image class='imgicon' src='{{icon.dtime}}'></image>起始时间:</view>
+      <view class='cellcontent'>开始：{{plist[index].actStartTime}}</view>
+      <view class='cellcontent'>结束：{{plist[index].actEndTime}}</view>
+    </view>
+  </view>
+
+  <view class='btnview'>
+    <view wx:if="{{plist[index].actFlag=='未开始'}}">
+      <button class='btn' type='primary' bindtap='yuyue'>预约参与活动</button>
+    </view>
+    <view wx:elif="{{plist[index].actFlag=='正进行'}}">
+      <button class='btn' type='primary' bindtap='canjia'>马上签到参与</button>
+    </view>
+    <view wx:elif="{{plist[index].actFlag=='已结束'}}">
+      <button class='btn' disabled='true'>活动已经结束</button>
+    </view>
+  </view>
+
+</view>
+  
+  
+  

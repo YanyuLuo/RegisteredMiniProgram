@@ -1,0 +1,21 @@
+<!--pages/mypubinfodetail/mypubinfodetail.wxml-->
+<view class='tip'>
+  ---------目前共有{{count}}人参与此活动---------
+</view>
+<view class='listbody'>
+  <view class='iteme' bindtap='seeName' bindlongtap='seeDetail' wx:for="{{plist}}" wx:key="" data-index='{{index}}'>
+    <view class='name'>{{plist[index].userName}}</view>
+    <view class='ut'>
+      <view class='unit'>{{plist[index].userUnit}}  {{plist[index].userType}}</view>
+      <view class='time'>{{plist[index].piTime}}</view>
+    </view>
+
+    
+
+  </view>
+    
+</view>
+<view><button class='btn' type='primary' bindtap='makeEmail'>详细信息发送至我的邮箱</button></view>
+<view class='dixian' wx:if="{{flag}}">
+  -----------------我是有底线的-----------------
+</view>

@@ -1,0 +1,85 @@
+/* pages/actdetinfo/actdetinfo.wxss */
+.item{
+  display: flex;
+  flex-direction: column
+}
+
+.part1{
+  display: flex;
+  flex-direction: row
+}
+.part2{
+  display: flex;
+  flex-direction: column;
+  margin-top: 13px;
+  margin-left: 15px;
+}
+.actimg{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.img{
+  width: 160px;
+  height: 120px;
+}
+
+.actsiminfo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 15px;
+  color: #6d5d5a;
+}
+.pub{
+  margin-top: 5px;
+}
+
+.ahr{
+  height: 3px;
+  background-color: #cccccc;
+  margin-top: 0px;
+  opacity: 0.5;
+}
+.cell{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  margin-right: 25px;
+}
+
+.cellhead{
+  margin-bottom: 3px;
+  font-size: 17px;
+  display: flex;
+  flex-direction: row
+}
+
+.cellcontent{
+  color: #4d4847;
+  font-size: 17px
+}
+.dot{
+  border-top: 1px dotted #cccccc;
+  margin-right: 15px;
+  margin-bottom: 6px;
+}
+.btn{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+.kantu{
+  position: relative;
+  left: 180px;
+  font-size: 13px;
+  margin-top: 3px;
+  color: #203e11;
+}
+.imgicon{
+    width: 30rpx;
+    height:30rpx;
+    margin-right:10px;
+    margin-top: 3px;
+}

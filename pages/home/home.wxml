@@ -1,0 +1,70 @@
+<!--pages/movie/movie.wxml-->
+<view class='swiperPic'>
+  <swiper class='swi' indicator-dots="{{indicatorDots}}"  
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"> 
+        <block wx:for="{{imgUrls}}">  
+          <swiper-item>  
+            <navigator url="{{item.link}}" hover-class="navigator-hover">  
+              <image src="{{item.url}}" class="slide-image" mode='{{item.mode}}'/> 
+            </navigator>   
+          </swiper-item>  
+        </block>  
+  </swiper>  
+</view>
+<view class='swiperNotice'>
+  <view >
+    <image src='{{noticeIconPath}}'  class='noticeIcon' mode='scaleToFill'></image>
+  </view> 
+  <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="6000">
+    <block wx:for="{{msgList}}">
+      <navigator url="../../pages/infor/infor" open-type="navigate">
+        <swiper-item>
+          <view class="swiper_item">{{item.title}}</view>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+</view>
+<view class='ahr'></view>
+<view class='nav'>
+  <view class='nav-item'>
+    <view><image src='../../images/join.png' style='width:25px;height:25px' bindtap='toCurrentAct'></image></view>
+    <view>参与</view>
+  </view>
+  <view class='nav-item'>
+    <view><image src='../../images/yuyue.png' style='width:25px;height:25px' bindtap='toReservationAct'></image></view>
+    <view>预约</view>
+  </view>
+  <view class='nav-item'>
+    <view><image src='../../images/fabu.png' style='width:25px;height:25px' bindtap='fingerPrint'></image></view>
+    <view>发布</view>
+  </view>
+  <view class='nav-item'>
+    <view><image src='../../images/announce.png' style='width:25px;height:25px' bindtap='information'></image></view>
+    <view>通知</view>
+  </view>
+</view>
+<view class='bhr'></view>
+
+<view class='listhead' bindtap='seeMore'>
+  <view>最新发布</view>
+  <view><image class='rightlog' src='../../images/home/toright.png' style='width:10px;height:10px;'></image></view>
+</view>
+<view class='listbody'>
+  <view class='item' bindtap='seeDetail' wx:for="{{plist}}" wx:key="" data-index='{{index}}'>
+    <view><image src='../../images/tu03.jpg' style='width:75px;height:58px;'></image></view>
+    <view class='desc'>
+      <view class='title'>{{plist[index].actName}}</view>
+      <view class='count'>
+        <view>{{plist[index].actOkTime}}</view>
+        <view class='liulan'>发布者:{{plist[index].userName}}</view>
+      </view>
+    </view> 
+  </view>
+
+</view>
+<view class='dixian' wx:if="{{flag}}">
+  -----------------我是有底线的-----------------
+</view>
+
+

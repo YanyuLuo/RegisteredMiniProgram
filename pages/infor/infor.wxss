@@ -1,0 +1,33 @@
+/* pages/infor/infor.wxss */
+.item{
+  display: flex;
+  margin-top: 10px;
+  font-size: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  margin-left: 10px;
+}
+.title{
+   margin-left: 10px;
+   margin-right: 20px;
+}
+.listbody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.concon{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #999999;
+}
+.desc{
+  display: flex;
+  flex-direction: row;
+}
+.concon2{
+  
+  color: #999999;
+}

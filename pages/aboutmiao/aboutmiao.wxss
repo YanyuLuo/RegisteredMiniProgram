@@ -1,0 +1,12 @@
+/* pages/aboutmiao/aboutmiao.wxss */
+.hh{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aa{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 15px;
+}

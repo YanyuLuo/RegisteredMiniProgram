@@ -1,0 +1,87 @@
+<!--pages/myinfodetail/myinfodetail.wxml-->
+<view class='item'>
+<view class='title'>用户信息情况查看与完善</view>
+<form class='form' bindsubmit='formSubmit' >
+  <view class='cell'>
+    <view class='celltitle' >真实姓名:</view>
+    <input class='inp' name="inputUserName" placeholder='请输入变更姓名' placeholder-class='pkp' disabled='{{subBtnDis}}' value='{{plist[0].userName}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >用户类型:</view>
+    <input class='inp' name="inputUserType" placeholder='学生/老师/其他' placeholder-class='pkp' disabled='{{subBtnDis}}' value='{{plist[0].userType}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >证件号码:</view>
+    <input class='inp' name="inputUserTypeId" placeholder='比如学号或工号' placeholder-class='pkp' disabled='{{subBtnDis}}' value='{{plist[0].userTypeId}}'></input>
+   
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >所在单位:</view>
+    <input class='inp' name="inputUserUnit" placeholder='单位名称变更' placeholder-class='pkp'disabled='{{subBtnDis}}'  value='{{plist[0].userUnit}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >所在班级:</view>
+    <input class='inp' type='number' name="inputUserClass" placeholder='班级信息变更' placeholder-class='pkp'disabled='{{subBtnDis}}' value='{{plist[0].userClass}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >电子邮箱:</view>
+    <input class='inp' name="inputUserEmail" placeholder='请输入电子邮箱地址' placeholder-class='pkp'disabled='{{subBtnDis}}' value='{{plist[0].userEmail}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >手机号码:</view>
+    <input class='inp' name="inputUserPhone" placeholder='请输入手机号码' placeholder-class='pkp'disabled='true' value='{{plist[0].userPhone}}'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >发布权限:</view>
+    <view wx:if="{{plist[0].pubPermission==1}}">
+    <input class='inp' name="inputP1" disabled='true' value='允许发布活动'></input>
+    </view>
+    <view wx:if="{{plist[0].pubPermission==0}}">
+    <input class='inp' name="inputP2" disabled='true' value='暂无发布权限'></input>
+    </view>
+  </view>
+
+  <view class='ahr'></view>
+ 
+  <view class='cell'>
+    <view class='celltitle' >替代权限:</view>
+    <view wx:if="{{plist[0].fingerPrint==1}}">
+    <input class='inp' name="inputF1" disabled='true' value='只可指纹注册'></input>
+    </view>
+    <view wx:if="{{plist[0].fingerPrint==0}}">
+    <input class='inp' name="inputF2" disabled='true' value='可使用短信替代'></input>
+    </view>
+    
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='btn-area'>
+    <button class='btn' type='primary' bindtap='editinfo'>编辑我的信息</button>
+    <button  class='btn' form-type='submit' type='{{subBtnType}}' disabled='{{subBtnDis}}'>提交修改信息</button>
+  </view>
+
+</form>
+</view>
+ 

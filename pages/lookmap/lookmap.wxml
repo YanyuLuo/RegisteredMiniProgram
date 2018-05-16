@@ -1,0 +1,4 @@
+<!--pages/lookmap/lookmap.wxml-->
+<map id="map102" longitude="{{mapfirstlng}}" latitude="{{mapfirstlat}}" scale="16" controls="{{controls}}" bindcontroltap="tocenter" markers="{{markers}}" bindmarkertap="markertap"  circles='{{circles}}' bindregionchange="regionchange"  show-location style="width: 100%; height: 500px;"></map>
+
+<view><button class='btn' type='primary' bindtap='nowLocation'>导航去选中的点</button></view>

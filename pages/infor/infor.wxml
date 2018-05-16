@@ -1,0 +1,13 @@
+<!--pages/infor/infor.wxml-->
+
+
+<view class='listbody'>
+  <view class='concon'>----------系统通知----------</view>
+  <view class='item'  wx:for="{{plist}}" wx:key="" data-index='{{index}}'>
+    <view class='desc'>
+      <view><image class='img' src='../../images/infoicon.png' style='width:20px;height:20px;'></image></view>
+      <view class='title'>{{plist[index].note}}</view>
+    </view> 
+    <view class='concon2'>------------------------------------------------</view>
+  </view>
+</view>

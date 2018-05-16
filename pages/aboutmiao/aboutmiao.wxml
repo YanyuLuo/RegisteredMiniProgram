@@ -1,0 +1,8 @@
+<!--pages/aboutmiao/aboutmiao.wxml-->
+
+<view class='hh'>
+  <text class='aa'>   签到喵是一款为解决零散签到注册问题的小程序</text>
+  <text class='aa'>   由于本喵技术有限，小程序中还存在或多或少的问题</text>
+  <text class='aa'>   感谢亲们的支持与谅解</text>
+  <text class='aa'>   欢迎致电作者“城里的鱼”</text>
+</view>

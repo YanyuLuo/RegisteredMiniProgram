@@ -1,0 +1,21 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='whole'> 
+
+  <view class='logomiao'>
+    <image class='logoimg' src='{{logomiao}}' mode='aspectFit'></image>
+  </view>
+  <view class='welcomeWord'>
+    <view>欢迎进入签到喵~</view>
+    <view>请先滑动登录</view>
+  </view>
+
+  <view class="content">
+    <view class="sliderContent">
+      <input placeholder="向右滑动" placeholder-class="input-placeholder" disabled="{{disabled}}" />
+      <view class="slider" bindtouchstart="moveSendBtnStart" bindtouchend="moveSendBtnEnd" bindtouchmove="moveSendBtn" style="left:{{moveSendBtnLeft}}rpx;background-color:{{SendBtnColor}}">登录</view>
+    </view>
+  </view>
+  
+
+</view>  
+

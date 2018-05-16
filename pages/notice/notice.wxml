@@ -1,0 +1,52 @@
+<!--pages/notice/notice.wxml-->
+<view class='search'>
+<image class='searIcon' src='{{searchLogo}}'></image>
+ <input class='inp' placeholder='搜索框，支持活动属性搜索' maxlength='16' bindinput='searchInfo'></input>
+ <image class='searIcon' src='{{searchBtn}}' bindtap='doSearch'></image>
+</view>
+<view class='nav'>
+  <view id="0" class="{{currentTab==0?'select':'normal'}}" bindtap='switchNav'>未开始</view>
+  <view class='line'>|</view>
+ <view id="1" class="{{currentTab==1?'select':'normal'}}" bindtap='switchNav'>正进行</view>
+  <view class='line'>|</view>
+  <view id="2" class="{{currentTab==2?'select':'normal'}}" bindtap='switchNav'>已结束</view>
+</view>
+<swiper current='{{currentTab}}' style='height:{{winHeight}}px'>
+  <swiper-item>
+    <view class='item' bindtap='seePrepDetail' wx:for="{{preplist}}" wx:key="" data-index='{{index}}'>
+      <view><image src='../../images/notice/tu009.jpg' style='width:75px;height:58px;'></image></view>
+      <view class='desc'>
+        <view class='title'>{{preplist[index].actName}}</view>
+        <view class='count'>
+          <view>{{preplist[index].actOkTime}}</view>
+          <view class='liulan'>发布者:{{preplist[index].userName}}</view>
+        </view>
+      </view> 
+    </view>
+    
+  </swiper-item>
+  <swiper-item>
+    <view class='item' bindtap='seeNowDetail' wx:for="{{nowlist}}" wx:key="" data-index='{{index}}'>
+      <view><image src='../../images/notice/tu008.jpg' style='width:75px;height:58px;'></image></view>
+      <view class='desc'>
+        <view class='title'>{{nowlist[index].actName}}</view>
+        <view class='count'>
+          <view>{{nowlist[index].actOkTime}}</view>
+          <view class='liulan'>发布者:{{nowlist[index].userName}}</view>
+        </view>
+      </view> 
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='item' bindtap='seeOverDetail' wx:for="{{overlist}}" wx:key="" data-index='{{index}}'>
+      <view><image src='../../images/notice/tu007.jpg' style='width:75px;height:58px;'></image></view>
+      <view class='desc'>
+        <view class='title'>{{overlist[index].actName}}</view>
+        <view class='count'>
+          <view>{{overlist[index].actOkTime}}</view>
+          <view class='liulan'>发布者:{{overlist[index].userName}}</view>
+        </view>
+      </view> 
+    </view>
+  </swiper-item>
+</swiper>

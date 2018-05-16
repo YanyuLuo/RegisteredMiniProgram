@@ -1,0 +1,69 @@
+<!--pages/pubact/pubact.wxml-->
+
+<view class='item'>
+<view class='title'>填写活动发布表</view>
+<form class='form' bindsubmit='formSubmit' bindreset='formReset'>
+  <view class='cell'>
+    <view class='celltitle' >活动名称:</view>
+    <input class='inp' name="inputname" placeholder='请输入活动名称' placeholder-class='pkp'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >活动主题:</view>
+    <input class='inp' name="inputtheme" placeholder='请输入活动主题' placeholder-class='pkp'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >活动起始时间:</view>
+    <view class='mypic'>
+      <picker name='sdate' class='pik' mode="date" value='{{startDate}}' start="2018-04-27" end="2018-12-12" bindchange='bindStartDateChange'>开始日期:{{startDate}}</picker>
+      <picker name='stime' class='pik' mode="time" value='{{startTime}}' start="00:00" end="23:59" bindchange='bindStartTimeChange'>开始时间:{{startTime}}</picker>
+      <picker name='edate' class='pik' mode="date" value='{{endDate}}' start="2018-04-27" end="2018-12-12" bindchange='bindEndDateChange'>结束日期:{{endDate}}</picker>
+      <picker name='etime' class='pik' mode="time" value='{{endTime}}' start="00:00" end="23:59" bindchange='bindEndTimeChange'>结束时间:{{endTime}}</picker>
+    </view>
+   
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >活动地点:</view>
+    <input class='inp' name="inputplace" placeholder='请输入活动地点' placeholder-class='pkp'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >签到有效半径:</view>
+    <input class='inp' type='number' name="inputrad" placeholder='有效半径单位为米' placeholder-class='pkp'></input>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >签到点中心坐标:</view>
+    <view class='cellpar'>
+      <input class='echo' type='digit' name="inputlat" placeholder='请输入纬度' placeholder-class='pkp' value='{{lat}}'></input>
+      <input class='echo' type='digit' name="inputlng" placeholder='请输入经度' placeholder-class='pkp' value='{{lng}}'></input>
+      <view class='xuan' bindtap='xuandian'>看图选点</view>
+    </view>
+  </view>
+
+  <view class='ahr'></view>
+
+  <view class='cell'>
+    <view class='celltitle' >活动内容:</view>
+    <textarea name="textarea" placeholder='您可以在此处填写活动内容和说明等信息' placeholder-class='pkp'></textarea> 
+  </view>  
+
+  <view class='btn-area'>
+    <button  class='btn' form-type='submit' type='primary'>提 交</button>
+    <button class='btn' form-type='reset'>重 置</button>
+  </view>
+
+</form>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/scresult/scresult.wxml-->
+
+
+<view class='tip'>
+  ---------共有{{count}}条包含关键字的搜索结果---------
+</view>
+
+<view class='listbody'>
+  <view class='item' bindtap='seeDetail' wx:for="{{plist}}" wx:key="" data-index='{{index}}'>
+    <view><image src='../../images/tu04.jpg' style='width:75px;height:58px;'></image></view>
+    <view class='desc'>
+      <view class='title'>{{plist[index].actName}}</view>
+      <view class='count'>
+        <view>{{plist[index].actOkTime}}</view>
+        <view class='liulan'>发布者:{{plist[index].userName}}</view>
+      </view>
+    </view> 
+  </view>
+
+</view>
