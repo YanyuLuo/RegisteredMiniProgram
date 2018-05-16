@@ -1,0 +1,67 @@
+{
+  "pages":[
+    
+    "pages/welcome/welcome",
+    "pages/myregister/myregister",
+    "pages/pubact/pubact",
+    "pages/home/home",
+    "pages/infor/infor",
+    "pages/mypubinfodetail/mypubinfodetail",
+    "pages/mypubinfo/mypubinfo",
+    "pages/lookmap/lookmap",
+    "pages/mapinfo/mapinfo",
+    "pages/scresult/scresult",
+    "pages/notice/notice",
+    "pages/myinfo/myinfo",
+    "pages/actdetinfo/actdetinfo",
+    "pages/index/index",
+    "pages/register/register",
+    "pages/mobile/mobile",
+    "pages/login/login",
+    "pages/myinfodetail/myinfodetail",
+    "pages/myyuyue/myyuyue",
+    "pages/myneedjoin/myneedjoin",
+    "pages/myhistoryact/myhistoryact",
+    "pages/reloadphone/reloadphone",
+    "pages/aboutmiao/aboutmiao"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#439057",
+    "navigationBarTitleText": "签到喵",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+ "tabBar": {
+  "backgroundColor":"#ffffff",
+  "color":"#999999",
+  "selectedColor": "#CC1004",
+  "borderStyle":"black",
+  "list": [
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "images/home-grey.png",
+      "selectedIconPath": "images/home-red.png"
+    },
+    {
+      "pagePath": "pages/notice/notice",
+      "text": "活动",
+      "iconPath": "images/act-grey.png",
+      "selectedIconPath": "images/act-red.png"
+    },
+    {
+      "pagePath": "pages/mapinfo/mapinfo",
+      "text": "附近",
+      "iconPath": "images/fujin-grey.png",
+      "selectedIconPath": "images/fujin-red.png"
+    },
+    {
+      "pagePath": "pages/myinfo/myinfo",
+      "text": "我的",
+      "iconPath": "images/my-grey.png",
+      "selectedIconPath": "images/my-red.png"
+    }
+  ]
+}
+}
